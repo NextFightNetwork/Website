@@ -25,6 +25,7 @@
 }
 
 .selection-button {
+    user-select: none;
     position: relative;
     background: none;
     border-radius: 6px;
@@ -47,6 +48,7 @@
     width: 100%;
     height: auto;
     z-index: -1;
+    pointer-events: none
 }
 
 .selection-button span {
@@ -73,6 +75,10 @@ body {
 }
 
 /*Paralax*/
+
+.background {
+    pointer-events: none
+}
 
 .main-content {
   position: relative;
