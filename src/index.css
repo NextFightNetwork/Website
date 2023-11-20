@@ -1,63 +1,140 @@
-.background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -9999;
-}
-
-.background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -9999;
-}
-
-.banner {
-    width: 40%;
-    display: flex;
-    margin: 50px auto auto;
-    transition: transform 0.3s;
-}
-
-.banner:hover {
-    transform: scale(1.1,1.1);
-}
-
 .main-button-container {
-    display: flex;
-    margin: 50px auto auto;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
 .blurred-button {
-    background: none;
-    border-radius: 15px;
-    border-width: 0;
-    backdrop-filter: blur(10px);
-    padding: 10px;
-    font-size: 30px;
-    color: white;
-    margin: 20px;
-    transition: all 0.4s;
+  background: none;
+  border-radius: 10px;
+  border-width: 0;
+  backdrop-filter: blur(2px);
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  margin: 20px;
+  box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
 }
 
 .blurred-button:hover {
+  color: gold;
+  transform: scale(1.2, 1.2);
+  cursor: pointer;
+}
+
+.selection-button {
+    position: relative;
+    background: none;
+    border-radius: 6px;
+    border-width: 0;
+    backdrop-filter: blur(2px);
+    font-size: 3vw;
+    padding: 10vw 1.5vw 1.5vw;
+    color: white;
+    margin: 70px 12px 40px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s, color 0.6s;
+    overflow: hidden;
+    min-width: 14vw;
+}
+
+.selection-button img {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.selection-button span {
+    position: relative;
+}
+
+.selection-button:hover {
     color: gold;
-    transform: scale(1.3, 1.3);
+    transform: scale(1.2, 1.2);
     cursor: pointer;
 }
+
+body {
+  margin: 0;
+}
+
+.main-selection {
+    z-index: 13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    --parallax-speed: 1.8;
+}
+
+/*Paralax*/
+
+.main-content {
+  position: relative;
+  background: #00aa5c;
+  padding-block: 12rem;
+  align-self: end;
+  z-index: 11;
+  margin-top: -1px;
+}
+
+.parallax > * {
+  grid-area: stack;
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+
+.parallax > img {
+  width: 100%;
+}
+
+.parallax {
+  position: relative;
+  z-index: 0;
+  min-height: 20vh;
+  display: grid;
+  grid-template-areas: "stack";
+}
+
+.primary-header {
+  align-items: center;
+  --parallax-speed: 1;
+}
+
+/*Gomme & Alphabastii*/
+.layer_1 {
+  --parallax-speed: 1.6;
+  z-index: -8;
+}
+
+/*Screen*/
+.layer_2 {
+  --parallax-speed: 1.8;
+  z-index: -9;
+}
+
+/*Background*/
+.layer_3 {
+  z-index: -10;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.parallax__foreground-front {
+    z-index: 12;
+    align-self: end;
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * 200px));
+  }
+}
+
+/* Paralax */
