@@ -127,8 +127,9 @@ body {
 }
 
 .parallax__foreground-front {
-    z-index: 12;
+    z-index: 13;
     align-self: end;
+    pointer-events: none;
 }
 
 @keyframes parallax {
