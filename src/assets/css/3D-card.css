@@ -1,0 +1,205 @@
+.hover-card {
+    transition-duration: 300ms;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-out;
+    transform: rotate3d(0,0,0,0);
+    border-radius: 20px;
+}
+
+.hover-card:hover {
+    border-radius: 20px;
+    transition-duration: 150ms;
+    box-shadow: 0 5px 20px 5px #00000044;
+}
+
+.hover-card .glow {
+    position: absolute;
+    z-index: -999;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    background-image: radial-gradient(circle at 50% -20%, rgba(241, 189, 241, 0), #0000000f);
+}
+
+.card-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-badges img {
+    margin-right: 5px;
+    max-width: 45%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-card {
+    --bs-card-border-width: 0px;
+    --bs-card-border-radius: 20px;
+    transition: filter 0.6s, transform 0.3s ease;
+    filter: blur(0);
+}
+
+.project-card.blurred {
+    filter: blur(2px);
+    transform: scale(0.9);
+}
+
+.card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-img-top:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.project-card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-button {
+    margin: 10px;
+    align-self: center;
+}
+
+.projects-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 100px 190px;
+    height: 100vh;
+    margin: 4rem auto 0;
+    overflow: hidden;
+}
+
+/* Shine */
+.hover14 figure {
+    position: relative;
+}
+.hover14 figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(195, 135, 255, 0.2) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(195, 135, 255, 0.2) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+figure {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+
+.hover14 figure {
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    margin: 0 0 1rem;
+}
+
+
+.card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    color: white;
+    word-wrap: break-word;
+    min-height: 27rem;
+}
+.card-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.card-text {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-button {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    color: white;
+    background-color: rgb(255, 151, 31);
+    text-decoration: none;
+    border-radius: 1rem;
+    transition: all 0.4s;
+    margin: 1rem;
+    opacity: 90%;
+}
+
+.card-button:hover {
+    background-color: rgb(255, 163, 57);
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 10px #fd8b3a, 0 0 25px rgba(255, 223, 96, 0.9), 0 0 10px rgba(255, 237, 179, 0.9);
+}
+
+.card-button:active {
+    opacity: 100%;
+    box-shadow: 1px 1px 50px #fd8b3a, 0 0 55px rgba(255, 223, 96, 0.9), 0 0 50px rgba(255, 237, 179, 0.9);
+}

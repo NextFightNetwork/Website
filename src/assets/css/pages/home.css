@@ -1,0 +1,81 @@
+.main-selection {
+    z-index: 13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    --parallax-speed: 1.8;
+}
+
+
+/*Paralax*/
+.background {
+    pointer-events: none
+}
+
+.main-content {
+    position: relative;
+    background: #00aa5c;
+    padding-block: 12rem;
+    align-self: end;
+    z-index: 11;
+    margin-top: -1px;
+    box-shadow: 1px 1px 25px 30px #00aa5c;
+}
+
+.parallax > * {
+    grid-area: stack;
+    animation: parallax linear;
+    animation-timeline: scroll();
+}
+
+.parallax > img {
+    width: 100%;
+}
+
+.parallax {
+    position: relative;
+    z-index: 0;
+    min-height: 20vh;
+    display: grid;
+    grid-template-areas: "stack";
+}
+
+.primary-header {
+    align-items: center;
+    --parallax-speed: 1;
+}
+
+/*Gomme & Alphabastii*/
+.layer_1 {
+    --parallax-speed: 1.6;
+    z-index: -8;
+}
+
+/*Screen*/
+.layer_2 {
+    --parallax-speed: 1.8;
+    z-index: -9;
+}
+
+/*Background*/
+.layer_3 {
+    z-index: -10;
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.parallax__foreground-front {
+    z-index: 13;
+    align-self: end;
+    pointer-events: none;
+}
+
+@keyframes parallax {
+    to {
+        transform: translateY(calc(var(--parallax-speed) * 200px));
+    }
+}
+
+/* Paralax */

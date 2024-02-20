@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    background: #005a30;
+    font-family: Arial, serif;
+}
+
+.background-filler {
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.4s;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+}
+
+.rounded-bg {
+    background-color: rgba(236, 173, 0, 0.4);
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 1px 1px 35px 10px rgba(236, 173, 0, 0.3);
+    transition: all 0.5s;
+}
+
+.background-filler pre {
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: red;
+    font-size: 25px;
+    background-color: rgba(0,0,0,0.2);
+    padding: 10px;
+    white-space: pre-wrap;
+    max-width: 80%;
+    margin: 35px;
+}
+
+.background-filler button {
+    font-size: 33px;
+    z-index: 1100;
+}
+
+.main-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.blurred-button {
+  background: none;
+  border-radius: 10px;
+  border-width: 0;
+  backdrop-filter: blur(2px);
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  margin: 20px;
+  box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+}
+
+.blurred-button:hover {
+  color: gold;
+  transform: scale(1.2, 1.2);
+  cursor: pointer;
+}
+
+.selection-button {
+    user-select: none;
+    position: relative;
+    background: none;
+    border-radius: 6px;
+    border-width: 0;
+    backdrop-filter: blur(2px);
+    font-size: 3vw;
+    padding: 10vw 1.5vw 1.5vw;
+    color: white;
+    margin: 70px 12px 40px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s, color 0.6s;
+    overflow: hidden;
+    min-width: 14vw;
+}
+
+.selection-button img {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none
+}
+
+.selection-button span {
+    position: relative;
+}
+
+.selection-button:hover {
+    color: gold;
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+.scrolled {
+    background-color: #00aa5c;
+    transition: all 0.6s ease-in-out;
+    box-shadow: 1px 1px 35px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-inline-start: 0;
+    padding: 0;
+}
+
+.nav-item {
+
+}
+
+.players-online {
+    margin: 10px;
+    color: white;
+}
+
+.nav-link {
+    color: #d0d0d0;
+    text-decoration: none;
+    margin: 10px;
+    transition: all 0.3s;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover {
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: 1px 1px 10px #fd8b3a, 0 0 25px rgba(255, 223, 96, 0.9), 0 0 10px rgba(255, 237, 179, 0.9);
+}
+
+.nav-link.active {
+    color: rgb(255, 151, 31);
+}
+
+.nav-link.active:hover {
+    color: rgb(255, 207, 104);
+}
+
+.dark-background {
+    background-color: #01371d;
+    position: relative;
+    padding-block: 1rem;
+    align-self: end;
+    z-index: 11;
+    margin-top: -1px;
+    animation: fade linear 0.6s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.text-content-container {
+    color: white;
+    padding: 80px 30px 30px;
+}
+
+.text-content-links a:link {
+    color: #a9812f;
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+
+.text-content-links a:visited {
+    color: #f4971d;
+    background-color: transparent;
+}
+
+.text-content-links a:hover {
+    color: #fdc97b;
+    background-color: transparent;
+    letter-spacing: 1px;
+}
+
+.text-content-links a:active {
+    color: #fdfdfd;
+    background-color: transparent;
+}
